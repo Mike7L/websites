@@ -1,6 +1,6 @@
 # Websites
 
-Website drafts for businesses on Amrum: https://mike7l.github.io/websites/
+Website drafts for businesses on Amrum and in Kiel: https://mike7l.github.io/websites/
 
 Static HTML/CSS/JavaScript, published by GitHub Pages from the main branch root. No build step. The root `index.html` is a catalog linking to every site; each site lives in its own folder with its own `assets/`.
 
@@ -10,6 +10,7 @@ Static HTML/CSS/JavaScript, published by GitHub Pages from the main branch root.
 | `neptun/` | Catalog of the Neptun drafts: `hotel-restaurant/` (both on one page), `hotel/`, `restaurant/` and the Onerbäänke bar in `onerbaeaenke/` (`v2/` is the night design) |
 | `seaside-amrum/` | Seaside Amrum holiday flats |
 | `die-muschelsucher/` | Die Muschelsucher café & restaurant |
+| `istanbul-coffee/` | Istanbul Coffee & Restaurant, Kiel-Gaarden. Source and content provenance: Projects/clients/clients/istanbul-coffee/pages/ and README.md there |
 
 To add a site, create a new folder with an `index.html` and add a link to the catalog in the root `index.html` (or to `neptun/index.html` for a Neptun draft).
 
