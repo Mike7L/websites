@@ -2,290 +2,139 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Gözde Barbershop in Kiel-Gaarden. Haarschnitte, Fades und Bartpflege in der Johannesstraße 45.">
-  <meta name="theme-color" content="#561b29">
+  <meta name="theme-color" content="#12151a">
+  <meta name="description" content="Gözde Barbershop in Kiel-Gaarden. Fades, klassische Haarschnitte und Bartkonturen in der Johannesstraße 45. Termine unter 0431 38549076.">
   <title>Gözde Barbershop · Kiel-Gaarden</title>
+  <link rel="stylesheet" href="fotobuch-v2.css">
   <style>
-    :root {
-      color-scheme: light;
-      --paper: #f6efe5;
-      --ink: #28221f;
-      --muted: #64544e;
-      --wine: #561b29;
-      --light-wine: #eac7b9;
-      --line: #cfc0b4;
-      --display: Georgia, "Times New Roman", serif;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font: 1rem/1.55 system-ui, sans-serif;
-    }
-    h1, h2, h3, p, dl, dd, figure { margin: 0; }
-    a { color: inherit; text-underline-offset: .24em; }
-    a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
-    img { display: block; width: 100%; height: 100%; object-fit: cover; }
-    .shell { width: min(100% - 5rem, 1320px); margin-inline: auto; }
-    .label { font-size: .875rem; font-weight: 650; letter-spacing: .13em; text-transform: uppercase; }
-    .skip { position: absolute; top: .5rem; left: .5rem; z-index: 1; padding: .75rem; background: var(--paper); }
-    .skip:not(:focus) { clip-path: inset(50%); }
-
-    .masthead {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: .5rem 1.5rem;
-      min-height: 78px;
-      padding-block: .6rem;
-    }
-    .wordmark { color: var(--wine); font: 700 1.85rem/1 var(--display); text-decoration: none; }
-    .navigation { display: flex; flex-wrap: wrap; gap: .15rem clamp(.9rem, 2.6vw, 2.5rem); }
-    .navigation a { display: inline-flex; align-items: center; min-height: 44px; font-size: .95rem; font-weight: 600; text-decoration: none; }
-    .navigation a:hover { text-decoration: underline; }
-    .draft { border: 1px solid var(--line); padding: .3rem .6rem; color: var(--wine); }
-
-    .hero { display: grid; grid-template-columns: 1fr 1fr; background: var(--wine); color: var(--paper); }
-    .hero-copy { padding: clamp(2.8rem, 6vw, 6rem) clamp(1.75rem, 4.5vw, 4.5rem); }
-    .hero-copy .label { color: var(--light-wine); }
-    h1 {
-      margin-block: 1.5rem 1.65rem;
-      font: 400 clamp(5rem, 9.8vw, 10rem)/.82 var(--display);
-      letter-spacing: -.08em;
-    }
-    h1 em { display: block; margin-top: .23em; font-size: .53em; letter-spacing: -.055em; font-weight: 400; }
-    .hero-lead { max-width: 28ch; font-size: clamp(1rem, 1.45vw, 1.2rem); }
-    .hero-photo { min-width: 0; min-height: 100%; position: relative; }
-    .hero-photo img { position: absolute; object-position: 53% 62%; }
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: fit-content;
-      min-height: 48px;
-      padding: .65rem 1.15rem;
-      border: 1px solid var(--paper);
-      background: var(--paper);
-      color: var(--wine);
-      font-weight: 700;
-      text-decoration: none;
-    }
-    .button:hover { background: var(--light-wine); }
-    .button:focus-visible { outline-color: var(--paper); }
-    .hero .button { margin-top: 1.65rem; }
-    .visit-strip {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      border-bottom: 1px solid var(--line);
-    }
-    .visit-strip a {
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-      padding: 1rem clamp(.85rem, 2.7vw, 2.6rem);
-      text-decoration: none;
-    }
-    .visit-strip a + a { border-left: 1px solid var(--line); }
-    .visit-strip a:hover { background: #efe3d7; }
-    .visit-strip .label { color: var(--wine); }
-    .visit-strip .detail { margin-top: .2rem; }
-
-    .section { padding-block: clamp(3.5rem, 7.5vw, 7.5rem); }
-    h2 { color: var(--wine); font: 400 clamp(3rem, 6.3vw, 6rem)/.97 var(--display); letter-spacing: -.065em; }
-    .services { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(2rem, 8vw, 8rem); }
-    .section-intro p { max-width: 29ch; margin-top: 1.1rem; color: var(--muted); }
-    .service-list > div { padding-block: 1.05rem; border-top: 1px solid var(--line); }
-    .service-list > div:last-child { border-bottom: 1px solid var(--line); }
-    .service-list dt { font: 400 clamp(1.45rem, 2.4vw, 2rem)/1.12 var(--display); }
-    .service-list dd { margin-top: .35rem; color: var(--muted); }
-
-    .salon { border-top: 1px solid var(--line); }
-    .salon-heading { display: flex; align-items: end; justify-content: space-between; flex-wrap: wrap; gap: 1rem 2rem; margin-bottom: 1.6rem; }
-    .salon-heading p { max-width: 34ch; color: var(--muted); }
-    .gallery { display: grid; grid-template-columns: 1.65fr 1fr; gap: clamp(.75rem, 2vw, 1.75rem); }
-    .gallery img { aspect-ratio: 1.65; height: auto; }
-    .gallery figure:last-child img { aspect-ratio: 1; object-position: center 65%; }
-    figcaption { padding-top: .5rem; color: var(--muted); font-size: .875rem; }
-
-    .reviews { border-top: 1px solid var(--line); }
-    .review-summary { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 1.5rem clamp(2rem, 8vw, 8rem); align-items: start; }
-    .review-summary h2 { font-size: clamp(2.5rem, 4.5vw, 4.4rem); }
-    .review-copy p { max-width: 42ch; color: var(--muted); }
-    .review-copy .rating { margin-bottom: .5rem; color: var(--wine); font-weight: 700; }
-    .review-copy a { display: inline-block; margin-top: .75rem; color: var(--wine); }
-
-    .contact { background: var(--wine); color: var(--paper); }
-    .contact h2 { color: inherit; }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem clamp(2rem, 8vw, 8rem); margin-top: 2.1rem; }
-    .contact h3 { margin-bottom: .75rem; color: var(--light-wine); }
-    address { font-style: normal; }
-    .contact-actions { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.15rem; }
-    .button-outline { background: transparent; color: var(--paper); }
-    .button-outline:hover { color: var(--wine); }
-    .hours { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
-    .hours th, .hours td { border-bottom: 1px solid #98636c; padding: .55rem 0; }
-    .hours th { padding-right: .75rem; text-align: left; font-weight: 500; }
-    .hours td { text-align: right; }
-    .access { margin-top: .9rem; color: var(--light-wine); }
-    footer {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: .5rem 1.5rem;
-      padding-block: 1rem;
-      color: var(--muted);
-      font-size: .875rem;
-    }
-
-    @media (max-width: 760px) {
-      .shell { width: calc(100% - 2rem); }
-      .masthead { display: grid; grid-template-columns: 1fr auto; padding-block: .85rem .25rem; }
-      .navigation { grid-row: 2; grid-column: 1 / -1; }
-      .hero, .services, .review-summary { grid-template-columns: 1fr; }
-      .hero-copy { padding-block: 2.4rem; }
-      h1 { font-size: clamp(4.7rem, 15vw, 7.3rem); }
-      .hero-photo { min-height: 0; aspect-ratio: 1.55; }
-      .visit-strip { grid-template-columns: 1fr; }
-      .visit-strip a { padding: .85rem 0; border-bottom: 1px solid var(--line); }
-      .visit-strip a + a { border-left: 0; }
-      .visit-strip { border-bottom: 0; }
-      .services { gap: 1.65rem; }
-    }
-
-    @media (max-width: 500px) {
-      .contact-grid, .gallery { grid-template-columns: 1fr; }
-      .gallery figure:last-child img { aspect-ratio: 1.65; }
-    }
+    .cut-links {list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));column-gap:2rem}
+    .cut-links a {display:block;border-top:1px solid var(--line);padding:.85rem 0;font-weight:600}
+    .cut-links a:hover {color:var(--blue)}
   </style>
 </head>
 <body>
-  <a class="skip" href="#inhalt">Zum Inhalt</a>
-  <header class="masthead shell">
-    <a class="wordmark" href="#inhalt" aria-label="Gözde Barbershop – Start">Gözde.</a>
-    <nav class="navigation" aria-label="Hauptnavigation">
-      <a href="#leistungen">Leistungen</a>
-      <a href="#salon">Salon</a>
-      <a href="#besuch">Besuch &amp; Kontakt</a>
-    </nav>
-    <span class="draft label">Entwurf</span>
+  <a class="skip" href="#start">Zum Inhalt</a>
+  <svg class="symbol-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="phone" viewBox="0 0 24 24"><path d="m5 3 3-1 3 5-2.6 2.5c1.7 3.1 3.1 4.6 6.2 6.2L17 13l5 3-1 3c-.5 1.7-2 2.5-3.7 2.1C10.8 19.9 4.1 13.2 2.9 6.7 2.6 5 3.3 3.5 5 3Z"/></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+    <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6.6v5.7l3.8 2.3"/></symbol>
+  </svg>
+  <header class="mast wrap">
+    <a class="brand" href="#start" aria-label="Gözde Barbershop, Startseite">
+      <svg viewBox="0 0 64 40" aria-hidden="true"><path d="M3 20C13 8 23 3 32 3s19 5 29 17C51 32 41 37 32 37S13 32 3 20Z" stroke-width="3"/><path d="M41 13H28a7 7 0 0 0 0 14h12v-7h-9" stroke-width="3.5"/></svg>
+      <span class="brand-name">Gözde<small>Barbershop</small></span>
+    </a>
+    <nav aria-label="Hauptnavigation"><a href="#schnitte">Schnitte</a><a href="#salon">Der Salon</a><a href="#besuch">Dein Besuch</a></nav>
+    <a class="action" href="tel:+4943138549076"><svg class="icon" aria-hidden="true"><use href="#phone"/></svg>Anrufen</a>
   </header>
-
-  <main id="inhalt">
-    <section class="hero shell" aria-labelledby="titel">
-      <div class="hero-copy">
-        <p class="label">Kiel-Gaarden</p>
-        <h1 id="titel">Gözde <em>Barbershop</em></h1>
-        <p class="hero-lead">Haarschnitte, Fades und Bartpflege in der Johannesstraße 45.</p>
-        <a class="button" href="tel:+4943138549076">Termin telefonisch anfragen</a>
+  <main id="start">
+    <section class="hero" aria-labelledby="name">
+      <div class="hero-layout wrap">
+        <div class="hero-copy">
+          <p class="kicker"><span class="stripe" aria-hidden="true"></span>Kiel · Gaarden-Ost</p>
+          <h1 id="name">Gözde<span>Barbershop</span></h1>
+          <p class="intro">Fades, klassische Schnitte und präzise Bartkonturen in der Johannesstraße.</p>
+          <div class="actions"><a class="action primary" href="tel:+4943138549076"><svg class="icon" aria-hidden="true"><use href="#phone"/></svg>Termin vereinbaren</a><a class="text-link" href="#schnitte">Alle Schnitte</a></div>
+        </div>
+        <div class="hero-photos">
+          <figure class="shot"><a href="#salon"><img src="img/fotobuch/platz-rechts.webp" width="900" height="1012" fetchpriority="high" alt="Barberstuhl im Gözde Barbershop"></a><figcaption>Am Barberstuhl</figcaption></figure>
+          <figure class="shot"><a href="#salon"><img src="img/fotobuch/aussen.webp" width="839" height="1050" alt="Die Leuchtschrift an der Johannesstraße"></a><figcaption>Johannesstraße 45</figcaption></figure>
+        </div>
       </div>
-      <figure class="hero-photo">
-        <img src="../assets/salon-uebersicht.jpg" alt="Der Gözde Barbershop mit großen Spiegeln und Schachbrettboden" width="1448" height="1086" fetchpriority="high">
-      </figure>
     </section>
-
-    <div class="visit-strip shell">
-      <a href="https://maps.app.goo.gl/9KV99X2SK7Gefa6M8">
-        <span class="label">Anfahrt</span>
-        <span class="detail">Johannesstraße 45, 24143 Kiel</span>
-      </a>
-      <a href="#zeiten">
-        <span class="label">Öffnungszeiten</span>
-        <span class="detail">Mo–Fr 9–19 Uhr · Sa 9–18 Uhr</span>
-      </a>
-      <a href="tel:+4943138549076">
-        <span class="label">Anrufen</span>
-        <span class="detail">0431 38549076</span>
-      </a>
+    <div class="info-band">
+      <div class="band-inner wrap">
+        <a href="https://maps.app.goo.gl/9KV99X2SK7Gefa6M8"><svg class="icon" aria-hidden="true"><use href="#pin"/></svg>Johannesstraße 45, Kiel</a>
+        <a href="#zeiten"><svg class="icon" aria-hidden="true"><use href="#clock"/></svg>Mo–Fr 9–19 · Sa 9–18 Uhr</a>
+        <a href="https://maps.app.goo.gl/9KV99X2SK7Gefa6M8" aria-label="4,8 von 5 bei Google, Stand November 2026. Bewertungen ansehen."><span aria-hidden="true" class="stars">★★★★★</span>4,8 bei Google</a>
+      </div>
     </div>
-
-    <section id="leistungen" class="services section shell">
-      <div class="section-intro">
-        <h2>Haar &amp; Bart</h2>
-        <p>Aktuelle Preise erfahren Sie telefonisch oder direkt im Salon.</p>
-      </div>
-      <dl class="service-list">
-        <div>
-          <dt>Haarschnitt &amp; Fade</dt>
-          <dd>Klassischer Herrenhaarschnitt, Skin Fade und Taper Fade.</dd>
-        </div>
-        <div>
-          <dt>Bartpflege &amp; Rasur</dt>
-          <dd>Bart in Form bringen, Konturen schneiden oder klassisch rasieren.</dd>
-        </div>
-        <div>
-          <dt>Kinderhaarschnitt &amp; Kurzhaar</dt>
-          <dd>Kinderhaarschnitte, kurze Schnitte und Undercuts mit individuellen Mustern.</dd>
-        </div>
-        <div>
-          <dt>Waxing &amp; Styling</dt>
-          <dd>Waxing für Gesicht, Ohren und Nase sowie Waschen und Styling.</dd>
-        </div>
-      </dl>
+    <section class="section wrap" id="schnitte" aria-labelledby="schnitt-title">
+      <div class="chapter-head"><h2 class="section-title" id="schnitt-title">Aus dem Barberstuhl<span>.</span></h2>
+        <p>Welcher Schnitt passt zu dir? Wähle einen Schnitt, um das Originalfoto des Salons auf Google Maps zu öffnen.</p></div>
+      <ul class="cut-links">
+        <li><a href="https://www.google.de/maps/place/G%C3%B6zde+Barbershop/@54.3125407,10.1474921,3a,75y,90t/data=!3m7!1e2!3m5!1sCIABIhCylMHSxcEu4EQrWSZ_IZ67!2e10!3e12!7i1200!8i1600!4m7!3m6!1s0x47b256f824ba3249:0x7bd298432964b646!8m2!3d54.3125407!4d10.1474921!10e5!16s%2Fg%2F11bw46k3f1">French Crop</a></li>
+        <li><a href="https://www.google.de/maps/place/G%C3%B6zde+Barbershop/@54.3125407,10.1474921,3a,75y,90t/data=!3m7!1e2!3m5!1sCIABIhA6P9Y7XaCMqzc8wknq5Mte!2e10!3e12!7i1200!8i1600!4m7!3m6!1s0x47b256f824ba3249:0x7bd298432964b646!8m2!3d54.3125407!4d10.1474921!10e5!16s%2Fg%2F11bw46k3f1">Seitenscheitel &amp; Bart</a></li>
+        <li><a href="https://www.google.de/maps/place/G%C3%B6zde+Barbershop/@54.3125407,10.1474921,3a,75y,90t/data=!3m7!1e2!3m5!1sCIABIhDT6s2xQAnk1JpbuJF80ghq!2e10!3e12!7i1200!8i1600!4m7!3m6!1s0x47b256f824ba3249:0x7bd298432964b646!8m2!3d54.3125407!4d10.1474921!10e5!16s%2Fg%2F11bw46k3f1">Skin Fade</a></li>
+        <li><a href="https://www.google.de/maps/place/G%C3%B6zde+Barbershop/@54.3125407,10.1474921,3a,75y,90t/data=!3m7!1e2!3m5!1sCIABIhBBLy5u20w8RsrFZrxgBcwS!2e10!3e12!7i1200!8i1600!4m7!3m6!1s0x47b256f824ba3249:0x7bd298432964b646!8m2!3d54.3125407!4d10.1474921!10e5!16s%2Fg%2F11bw46k3f1">Texturierter Undercut</a></li>
+        <li><a href="https://www.google.de/maps/place/G%C3%B6zde+Barbershop/@54.3125407,10.1474921,3a,75y,90t/data=!3m7!1e2!3m5!1sCIABIhCAmAcdQMM6aWjiCNKTu-G7!2e10!3e12!7i1200!8i1600!4m7!3m6!1s0x47b256f824ba3249:0x7bd298432964b646!8m2!3d54.3125407!4d10.1474921!10e5!16s%2Fg%2F11bw46k3f1">Buzz Cut</a></li>
+        <li><a href="https://www.google.de/maps/place/G%C3%B6zde+Barbershop/@54.3125407,10.1474921,3a,75y,90t/data=!3m7!1e2!3m5!1sCIABIhDW68CW06ZqY7havW58eAIw!2e10!3e12!7i1200!8i1600!4m7!3m6!1s0x47b256f824ba3249:0x7bd298432964b646!8m2!3d54.3125407!4d10.1474921!10e5!16s%2Fg%2F11bw46k3f1">Gezwirbelter Bart</a></li>
+        <li><a href="https://www.google.de/maps/place/G%C3%B6zde+Barbershop/@54.3125407,10.1474921,3a,75y,90t/data=!3m7!1e2!3m5!1sCIABIhAKLCOyHzmLe_s9MzH4n-HU!2e10!3e12!7i1200!8i1600!4m7!3m6!1s0x47b256f824ba3249:0x7bd298432964b646!8m2!3d54.3125407!4d10.1474921!10e5!16s%2Fg%2F11bw46k3f1">Klassischer Kurzhaarschnitt</a></li>
+        <li><a href="https://www.google.de/maps/place/G%C3%B6zde+Barbershop/@54.3125407,10.1474921,3a,75y,90t/data=!3m7!1e2!3m5!1sCIABIhATSIsCa7HkJV3hhuKjNlWU!2e10!3e12!7i1200!8i1600!4m7!3m6!1s0x47b256f824ba3249:0x7bd298432964b646!8m2!3d54.3125407!4d10.1474921!10e5!16s%2Fg%2F11bw46k3f1">Hair Design</a></li>
+        <li><a href="https://www.google.de/maps/place/G%C3%B6zde+Barbershop/@54.3125407,10.1474921,3a,75y,90t/data=!3m7!1e2!3m5!1sCIABIhAb7EHHM06mEZEu5_6qUiJA!2e10!3e12!7i1200!8i1600!4m7!3m6!1s0x47b256f824ba3249:0x7bd298432964b646!8m2!3d54.3125407!4d10.1474921!10e5!16s%2Fg%2F11bw46k3f1">Tolle &amp; Scheitel</a></li>
+        <li><a href="https://www.google.de/maps/place/G%C3%B6zde+Barbershop/@54.3125407,10.1474921,3a,75y,90t/data=!3m7!1e2!3m5!1sCIABIhAZYVBlfC3vhB8IdLvZ6HmY!2e10!3e12!7i1200!8i1600!4m7!3m6!1s0x47b256f824ba3249:0x7bd298432964b646!8m2!3d54.3125407!4d10.1474921!10e5!16s%2Fg%2F11bw46k3f1">Natürlicher Nacken</a></li>
+      </ul>
+      <aside class="consult" aria-labelledby="beratung"><img src="img/schnittbuch/gravur-transparent.webp" alt="" loading="lazy" width="400" height="500"><div>
+        <h3 id="beratung">So erklärst du deinen Schnitt</h3>
+        <p>Zeig deinem Barber ein Foto. Sag dazu, wie viel Länge du oben behalten möchtest und wo der Übergang beginnen soll. Beim Bart hilft ein Fingerzeig auf die gewünschte Wangenlinie.</p>
+        <p>Aktuelle Preise erfährst du <a href="tel:+4943138549076">telefonisch</a> oder direkt im Salon.</p></div></aside>
     </section>
-
-    <section id="salon" class="salon section shell">
-      <div class="salon-heading">
-        <h2>Der Salon</h2>
-        <p>Große Spiegel an den Bedienplätzen, grüne Chesterfield-Sofas im Wartebereich.</p>
-      </div>
-      <div class="gallery">
-        <figure>
-          <img src="../assets/lounge.jpg" alt="Grüne Chesterfield-Sofas mit Glastisch" width="1448" height="1086" loading="lazy">
-          <figcaption>Wartebereich</figcaption>
-        </figure>
-        <figure>
-          <img src="../assets/platz-rechts.jpg" alt="Schwarzer Friseurstuhl vor einem beleuchteten Spiegel" width="1122" height="1402" loading="lazy">
-          <figcaption>Bedienplatz</figcaption>
-        </figure>
+    <section class="section salon" id="salon" aria-labelledby="salon-title">
+      <div class="wrap"><div class="chapter-head"><h2 class="section-title" id="salon-title">Der Salon<span>.</span></h2><p>Die blaue Leuchtschrift an der Johannesstraße 45 zeigt dir den Eingang. Drinnen warten grüne Chesterfield-Sofas.</p></div>
+        <div class="rooms"><figure class="shot"><a class="photo-link" href="../assets/aussen.jpg" data-group="salon" aria-label="Der Eingang – Foto vergrößern"><img src="img/fotobuch/aussen.webp" width="839" height="1050" loading="lazy" decoding="async" alt="Die Gözde-Leuchtschrift und der Eingang an der Johannesstraße."><span class="zoom" aria-hidden="true">⤢</span></a><figcaption>Der Eingang</figcaption></figure>
+<figure class="shot"><a class="photo-link" href="../assets/platz-rechts.jpg" data-group="salon" aria-label="Am Barberstuhl – Foto vergrößern"><img src="img/fotobuch/platz-rechts.webp" width="900" height="1012" loading="lazy" decoding="async" alt="Schwarzer Barberstuhl vor den Spiegeln und dem Schachbrettboden."><span class="zoom" aria-hidden="true">⤢</span></a><figcaption>Am Barberstuhl</figcaption></figure>
+<figure class="shot"><a class="photo-link" href="../assets/lounge.jpg" data-group="salon" aria-label="Die Lounge – Foto vergrößern"><img src="img/fotobuch/lounge.webp" width="900" height="459" loading="lazy" decoding="async" alt="Grüne Chesterfield-Sofas am Fenster."><span class="zoom" aria-hidden="true">⤢</span></a><figcaption>Die Lounge</figcaption></figure>
+<figure class="shot"><a class="photo-link" href="../assets/platz-detail.jpg" data-group="salon" aria-label="Am Spiegel – Foto vergrößern"><img src="img/fotobuch/platz-detail.webp" width="900" height="956" loading="lazy" decoding="async" alt="Bedienplatz mit Spiegel, Waschbecken und Werkzeug."><span class="zoom" aria-hidden="true">⤢</span></a><figcaption>Am Spiegel</figcaption></figure>
+<figure class="shot"><a class="photo-link" href="../assets/salon-uebersicht.jpg" data-group="salon" aria-label="Blick in den Salon – Foto vergrößern"><img src="img/fotobuch/salon-uebersicht.webp" width="900" height="486" loading="lazy" decoding="async" alt="Die beiden Plätze und der Blick durch den Salon."><span class="zoom" aria-hidden="true">⤢</span></a><figcaption>Blick in den Salon</figcaption></figure>
+<figure class="shot"><a class="photo-link" href="../assets/salon-stuehle.jpg" data-group="salon" aria-label="Die Arbeitsplätze – Foto vergrößern"><img src="img/fotobuch/salon-stuehle.webp" width="900" height="466" loading="lazy" decoding="async" alt="Die Arbeitsplätze von der Seite mit Blick auf Spiegel und Produkte."><span class="zoom" aria-hidden="true">⤢</span></a><figcaption>Die Arbeitsplätze</figcaption></figure></div>
       </div>
     </section>
-
-    <section class="reviews section shell" aria-labelledby="bewertungen">
-      <div class="review-summary">
-        <h2 id="bewertungen">Kundenstimmen</h2>
-        <div class="review-copy">
-          <p class="rating">4,8 von 5 · 150 Google-Bewertungen</p>
-          <p>Gäste loben das freundliche Team, saubere Übergänge und präzise Bartkonturen. Stand November 2026.</p>
-          <a href="https://maps.app.goo.gl/9KV99X2SK7Gefa6M8">Bewertungen bei Google lesen</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="besuch" class="contact section">
-      <div class="shell">
-        <h2>Ihr Besuch</h2>
+    <section class="contact section" id="besuch" aria-labelledby="besuch-title">
+      <div class="wrap">
+        <div class="contact-top"><h2 class="section-title" id="besuch-title">Dein <em>Termin.</em></h2><a href="tel:+4943138549076">0431 38549076</a></div>
         <div class="contact-grid">
-          <div>
-            <h3 class="label">Kontakt &amp; Anfahrt</h3>
-            <address>Gözde Barbershop<br>Johannesstraße 45<br>24143 Kiel-Gaarden</address>
-            <div class="contact-actions">
-              <a class="button" href="tel:+4943138549076">0431 38549076</a>
-              <a class="button button-outline" href="https://maps.app.goo.gl/9KV99X2SK7Gefa6M8">Route in Google Maps</a>
-            </div>
-          </div>
-          <div id="zeiten">
-            <h3 class="label">Öffnungszeiten</h3>
-            <table class="hours" aria-label="Öffnungszeiten">
-              <tbody>
-                <tr><th scope="row">Montag–Freitag</th><td>09:00–19:00 Uhr</td></tr>
-                <tr><th scope="row">Samstag</th><td>09:00–18:00 Uhr</td></tr>
-                <tr><th scope="row">Sonntag</th><td>Geschlossen</td></tr>
-              </tbody>
-            </table>
-            <p class="access">Termin empfohlen · Rollstuhlgerechter Eingang</p>
-          </div>
+          <div><h3>Hier findest du uns</h3><address>Johannesstraße 45<br>24143 Kiel-Gaarden</address><a href="https://maps.app.goo.gl/9KV99X2SK7Gefa6M8">In Google Maps öffnen</a><p class="access">Rollstuhlgerechter Eingang</p></div>
+          <div id="zeiten"><h3>Öffnungszeiten</h3><dl class="hours"><div><dt>Montag bis Freitag</dt><dd>09:00–19:00</dd></div><div><dt>Samstag</dt><dd>09:00–18:00</dd></div><div><dt>Sonntag</dt><dd>Geschlossen</dd></div></dl><p class="access">Für deinen Besuch empfehlen wir einen Termin.</p></div>
         </div>
       </div>
     </section>
   </main>
+  <footer class="wrap"><span>Gözde Barbershop · Kiel-Gaarden</span><span>Website-Entwurf · November 2026</span></footer>
+  <dialog class="viewer" aria-label="Fotoansicht">
+    <button class="close-view" type="button" aria-label="Fotoansicht schließen" autofocus>Schließen ×</button>
+    <img class="full-photo" alt="">
+    <div class="viewer-controls">
+      <button type="button" data-step="-1" aria-label="Vorheriges Foto">‹</button>
+      <span class="viewer-title" aria-live="polite"></span>
+      <button type="button" data-step="1" aria-label="Nächstes Foto">›</button>
+    </div>
+  </dialog>
+  <script>
+    const viewer = document.querySelector('.viewer');
+    const fullPhoto = viewer.querySelector('.full-photo');
+    const title = viewer.querySelector('.viewer-title');
+    let photos = [];
+    let index = 0;
 
-  <footer class="shell">
-    <span>Gözde Barbershop · Kiel-Gaarden</span>
-    <span>Impressum und Datenschutz werden zur Veröffentlichung ergänzt.</span>
-  </footer>
+    function showPhoto(step) {
+      index = (index + step + photos.length) % photos.length;
+      const link = photos[index];
+      fullPhoto.src = link.href;
+      fullPhoto.alt = link.querySelector('img').alt;
+      title.textContent = link.closest('figure').querySelector('figcaption').textContent;
+    }
+
+    document.querySelectorAll('.photo-link').forEach(link => {
+      link.addEventListener('click', event => {
+        if (!viewer.showModal || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        photos = [...document.querySelectorAll('.photo-link')].filter(item => item.dataset.group === link.dataset.group);
+        index = photos.indexOf(link);
+        showPhoto(0);
+        viewer.showModal();
+      });
+    });
+    viewer.querySelector('.close-view').addEventListener('click', () => viewer.close());
+    viewer.querySelectorAll('[data-step]').forEach(button => {
+      button.addEventListener('click', () => showPhoto(Number(button.dataset.step)));
+    });
+    viewer.addEventListener('keydown', event => {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      showPhoto(event.key === 'ArrowLeft' ? -1 : 1);
+    });
+  </script>
 </body>
 </html>
