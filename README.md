@@ -11,6 +11,7 @@ Static HTML/CSS/JavaScript, published by GitHub Pages from the main branch root.
 | `seaside-amrum/` | Seaside Amrum holiday flats |
 | `die-muschelsucher/` | Die Muschelsucher café & restaurant |
 | `istanbul-coffee/` | Istanbul Coffee & Restaurant, Kiel-Gaarden. Source and content provenance: Projects/clients/clients/istanbul-coffee/pages/ and README.md there |
+| `goezde-barbershop/` | Gözde Barbershop, Kiel-Gaarden. Source and content provenance: Projects/clients/clients/goezde-barbershop/pages/ and README.md there |
 
 To add a site, create a new folder with an `index.html` and add a link to the catalog in the root `index.html` (or to `neptun/index.html` for a Neptun draft).
 
