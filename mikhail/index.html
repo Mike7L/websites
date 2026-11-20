@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mikhail Voloshin · KI, Websites &amp; Social Media in Kiel</title>
+<meta name="description" content="Mikhail Voloshin aus Kiel: KI-Automatisierung, Websites und Social Media für kleine Betriebe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: eine schmale Lesespalte; oben die eigentliche Visitenkarte als einziges „Objekt“, darunter ruhige Abschnitte mit Haarlinien. */
+:root {
+  --bg: #eef1f2;          /* Förde-Nebel */
+  --surface: #ffffff;
+  --ink: #102a30;         /* tiefes Fjordblau */
+  --muted: #4f6369;
+  --line: #cdd6d8;
+  --accent: #0f6e73;      /* Petrol */
+  --buoy: #c8462b;        /* Tonnenrot, nur als Punkt */
+  --card-bg: #102a30;
+  --card-ink: #eef4f4;
+  --card-muted: #9fb7ba;
+
+  --f-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Source Sans 3", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --step--1: 0.875rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.3rem;
+  --step-2: 1.75rem;
+  --step-3: clamp(2.1rem, 5.5vw, 3.2rem);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c1b1f; --surface: #12262b; --ink: #e3ecec; --muted: #9db1b4; --line: #24403f;
+    --accent: #5cc3c4; --buoy: #ec7253; --card-bg: #e3ecec; --card-ink: #102a30; --card-muted: #4f6369;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0c1b1f; --surface: #12262b; --ink: #e3ecec; --muted: #9db1b4; --line: #24403f;
+  --accent: #5cc3c4; --buoy: #ec7253; --card-bg: #e3ecec; --card-ink: #102a30; --card-muted: #4f6369;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 46rem; margin: 0 auto; padding-block: 3rem 4rem; display: grid; gap: 3.5rem; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-height: 1.15; }
+h2 { font-size: var(--step-2); font-weight: 700; }
+h3 { font-size: var(--step-1); font-weight: 500; }
+p { margin: 0; }
+a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.label {
+  font-family: var(--f-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+}
+
+/* Hero */
+.hero { display: grid; gap: 1.25rem; }
+.hero h1 { font-size: var(--step-3); font-weight: 700; letter-spacing: -0.01em; }
+.hero h1 .dot { color: var(--buoy); }
+.hero .lede { font-size: var(--step-1); color: var(--muted); max-width: 36rem; line-height: 1.45; }
+
+/* Die Visitenkarte */
+.card {
+  background: var(--card-bg); color: var(--card-ink);
+  border-radius: 14px; padding: clamp(1.25rem, 4vw, 2rem);
+  aspect-ratio: 85 / 55; max-width: 100%; width: 100%; max-width: 34rem;
+  display: grid; grid-template-rows: auto 1fr auto; gap: 1rem;
+  box-shadow: 0 1px 0 rgba(0,0,0,.04), 0 18px 40px -22px rgba(16,42,48,.55);
+}
+.card-top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.card .name { font-family: var(--f-display); font-size: clamp(1.6rem, 5vw, 2.2rem); font-weight: 700; line-height: 1; }
+.card .coords { font-family: var(--f-mono); font-size: 0.72rem; color: var(--card-muted); letter-spacing: 0.04em; }
+.card .role { font-size: var(--step-0); color: var(--card-muted); align-self: center; max-width: 24rem; line-height: 1.4; }
+.card .role b { color: var(--card-ink); font-weight: 600; }
+.card-contact { display: grid; gap: 0.35rem; font-family: var(--f-mono); font-size: 0.85rem; }
+.card-contact .row { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; min-width: 0; }
+.card-contact .k { color: var(--card-muted); width: 4.5rem; flex: none; }
+.card-contact .v { overflow-wrap: anywhere; min-width: 0; }
+.card-contact .v.todo { color: var(--card-muted); font-style: italic; }
+.copy {
+  font: inherit; font-size: 0.7rem; color: var(--card-ink); background: transparent;
+  border: 1px solid currentColor; border-radius: 999px; padding: 0.05rem 0.55rem; cursor: pointer; opacity: .75;
+}
+.copy:hover { opacity: 1; }
+@media (max-width: 30rem) { .card { aspect-ratio: auto; } }
+
+/* Abschnitte */
+section { display: grid; gap: 1.5rem; }
+.section-head { display: grid; gap: 0.4rem; }
+.services { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.service { display: grid; grid-template-columns: 11rem 1fr; gap: 0.5rem 1.5rem; padding-block: 1.25rem; border-bottom: 1px solid var(--line); }
+.service h3 { font-size: var(--step-0); font-weight: 700; font-family: var(--f-display); }
+.service p { color: var(--muted); min-width: 0; }
+.service .for { font-family: var(--f-mono); font-size: 0.75rem; color: var(--accent); margin-top: 0.35rem; display: block; }
+@media (max-width: 34rem) { .service { grid-template-columns: 1fr; } }
+
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr)); }
+.steps li { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1.1rem 1.2rem; display: grid; gap: 0.4rem; align-content: start; }
+.steps .n { font-family: var(--f-mono); font-size: 0.75rem; color: var(--buoy); }
+.steps b { font-family: var(--f-display); font-weight: 700; }
+.steps span { color: var(--muted); font-size: var(--step--1); line-height: 1.5; }
+.quote { font-family: var(--f-display); font-size: var(--step-1); font-weight: 500; border-left: 3px solid var(--buoy); padding-left: 1rem; max-width: 34rem; }
+
+.timeline { display: grid; gap: 0; }
+.tl { display: grid; grid-template-columns: 7.5rem 1fr; gap: 0.25rem 1.5rem; padding-block: 0.9rem; border-top: 1px solid var(--line); }
+.tl:last-child { border-bottom: 1px solid var(--line); }
+.tl .when { font-family: var(--f-mono); font-size: 0.8rem; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 0.2rem; }
+.tl .what { min-width: 0; }
+.tl .what b { font-weight: 600; }
+.tl .what p { color: var(--muted); font-size: var(--step--1); }
+@media (max-width: 34rem) { .tl { grid-template-columns: 1fr; } }
+
+.facts { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chip { font-family: var(--f-mono); font-size: 0.78rem; padding: 0.3rem 0.7rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
+
+.contact { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: clamp(1.25rem, 4vw, 2rem); display: grid; gap: 1rem; }
+.contact p { color: var(--muted); max-width: 34rem; }
+footer { color: var(--muted); font-size: var(--step--1); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 1.25rem; }
+footer .label { color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) {
+  .card { transition: transform .4s ease; }
+  .card:hover { transform: rotate(-0.6deg) translateY(-2px); }
+}
+</style>
+<style>body{margin:0}</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero">
+    <span class="label">Kiel · Software seit 2003</span>
+    <h1>Weniger Routine im Betrieb. Mit KI, die zu Ihren Abläufen passt<span class="dot">.</span></h1>
+    <p class="lede">Ich bin Mikhail, Softwareentwickler aus Kiel. Ich automatisiere wiederkehrende Arbeit in kleinen Firmen, baue Websites und betreue Google-Bewertungen und Social Media für Restaurants und Salons.</p>
+  </header>
+
+  <article class="card" aria-label="Visitenkarte">
+    <div class="card-top">
+      <span class="name">Mikhail Voloshin</span>
+      <span class="coords">54.32° N · 10.13° O · Kiel</span>
+    </div>
+    <p class="role"><b>KI-Automatisierung, Websites, Social Media</b> für Betriebe mit 3 bis 40 Leuten</p>
+    <div class="card-contact" id="card-contact"></div>
+  </article>
+
+  <section aria-labelledby="h-leistungen">
+    <div class="section-head">
+      <span class="label">Leistungen</span>
+      <h2 id="h-leistungen">Was ich für Sie mache</h2>
+    </div>
+    <div class="services">
+      <div class="service">
+        <h3>Routine abgeben</h3>
+        <div>
+          <p>Ich suche mit Ihnen die eine Aufgabe, die jede Woche Stunden frisst: Angebote schreiben, Daten abtippen, Anfragen sortieren. Innerhalb von ein bis zwei Wochen übernimmt das ein KI-Ablauf, den Ihr Team versteht und kontrolliert.</p>
+          <span class="for">Firmen mit 10–40 Mitarbeitenden</span>
+        </div>
+      </div>
+      <div class="service">
+        <h3>KI im eigenen Haus</h3>
+        <div>
+          <p>Bei sensiblen Daten muss nichts in eine fremde Cloud. Ich richte Sprachmodelle ein, die auf Ihrem eigenen Rechner laufen. So bleiben Kundendaten bei Ihnen, auch mit Blick auf die DSGVO.</p>
+          <span class="for">Pflege, Kanzleien, Handwerk</span>
+        </div>
+      </div>
+      <div class="service">
+        <h3>Website</h3>
+        <div>
+          <p>Eine schnelle Seite, die auf dem Handy gut aussieht: Öffnungszeiten, Speisekarte oder Preise, Reservierung, Anfahrt. Sie sehen einen fertigen Entwurf, bevor Sie sich entscheiden.</p>
+          <span class="for">Restaurants, Cafés, Friseure</span>
+        </div>
+      </div>
+      <div class="service">
+        <h3>Bewertungen &amp; Social Media</h3>
+        <div>
+          <p>Ich antworte auf Ihre Google-Bewertungen und mache aus Ihren Handyfotos Posts und Reels für Instagram, Facebook und TikTok. Sie geben jeden Beitrag frei, bevor er erscheint.</p>
+          <span class="for">Gastronomie, Salons, Läden</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-ablauf">
+    <div class="section-head">
+      <span class="label">Ablauf</span>
+      <h2 id="h-ablauf">So fangen wir an</h2>
+    </div>
+    <p class="quote">Meine erste Frage ist immer dieselbe: Was hat Sie letzte Woche am meisten Zeit gekostet?</p>
+    <ol class="steps">
+      <li><span class="n">Schritt 1</span><b>Gespräch</b><span>Zwanzig Minuten bei Ihnen vor Ort oder am Telefon. Ich höre zu und verkaufe nichts.</span></li>
+      <li><span class="n">Schritt 2</span><b>Entwurf</b><span>Sie bekommen ein konkretes Beispiel: einen Ablauf, Antwortentwürfe oder einen Website-Entwurf.</span></li>
+      <li><span class="n">Schritt 3</span><b>Freigabe</b><span>Nichts geht in Ihrem Namen raus, bevor Sie es freigegeben haben.</span></li>
+      <li><span class="n">Schritt 4</span><b>Betreuung</b><span>Ich pflege, was läuft, und sage Bescheid, wenn sich etwas Neues lohnt.</span></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="h-erfahrung">
+    <div class="section-head">
+      <span class="label">Erfahrung</span>
+      <h2 id="h-erfahrung">Über 20 Jahre Software, davon viele Jahre mit Daten und KI</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl"><span class="when">seit 2023</span><div class="what"><b>Selbstständig</b><p>Telegram-Bot mit KI-Suche, der rund 1.700 Nutzer mit lokalen Dienstleistern zusammenbringt. Wimm: Apps für macOS und iOS, die Sprachnotizen, Dokumente und Fotos mit KI ordnen. Software für einen geotechnischen Prüfstand.</p></div></div>
+      <div class="tl"><span class="when">2023</span><div class="what"><b>Zellerfeld, Hamburg</b><p>3D-gedruckte Schuhe: Software und Dashboards für die Druckerflotte.</p></div></div>
+      <div class="tl"><span class="when">2018–2022</span><div class="what"><b>Capten, Mitgründer</b><p>Content-Analytics für Verlage: Idee, Architektur und Produkt.</p></div></div>
+      <div class="tl"><span class="when">2016–2021</span><div class="what"><b>news aktuell (dpa), Hamburg</b><p>Entwicklung von presseportal.de, Umstieg auf Elasticsearch, Textanalyse mit Python.</p></div></div>
+      <div class="tl"><span class="when">2008–2015</span><div class="what"><b>T.F.O. Trade, Kiel</b><p>Projektleitung für Onlineshop und eigenes Lagersystem. Kommissionierung und Wareneingang deutlich schneller.</p></div></div>
+      <div class="tl"><span class="when">2003–2008</span><div class="what"><b>Erste Jahre</b><p>Buchhaltungs- und Lagersoftware, Projektplanung, Webanalyse.</p></div></div>
+    </div>
+    <div class="facts" aria-label="Werkzeuge">
+      <span class="chip">Python</span><span class="chip">LLM &amp; RAG</span><span class="chip">Lokale Modelle</span><span class="chip">BigQuery</span><span class="chip">Elasticsearch</span>
+    </div>
+  </section>
+
+  <section class="contact" aria-labelledby="h-kontakt">
+    <span class="label">Kontakt</span>
+    <h2 id="h-kontakt">Erzählen Sie mir, was Sie aufhält</h2>
+    <p>Am einfachsten per WhatsApp oder Anruf. Ich komme in Kiel gern persönlich vorbei.</p>
+    <div class="card-contact" id="contact-list" style="font-size:0.95rem"></div>
+  </section>
+
+  <footer>
+    <span>Mikhail Voloshin · Kiel</span>
+    <span class="label">Deutsch · English</span>
+  </footer>
+</div>
+
+<script>
+// Kontaktdaten. Leere Felder erscheinen als „folgt“.
+const CONTACT = [
+  { k: "Telefon", v: "+49 176 67800875" },
+  { k: "WhatsApp", v: "+49 176 67800875", href: "https://wa.me/4917667800875", link: "Chat öffnen" },
+  { k: "E-Mail", v: "vmikael@gmail.com" },
+  { k: "LinkedIn", v: "linkedin.com/in/vmicha", href: "https://www.linkedin.com/in/vmicha/", link: "Profil" },
+];
+
+function render(target, onDark) {
+  const el = document.getElementById(target);
+  if (!el) return;
+  el.textContent = "";
+  for (const item of CONTACT) {
+    const row = document.createElement("div");
+    row.className = "row";
+    const k = document.createElement("span");
+    k.className = "k"; k.textContent = item.k;
+    const v = document.createElement("span");
+    v.className = "v" + (item.v ? "" : " todo");
+    v.textContent = item.v || "folgt";
+    row.append(k, v);
+    if (item.v) {
+      const b = document.createElement("button");
+      b.className = "copy"; b.type = "button"; b.textContent = "Kopieren";
+      if (!onDark) b.style.color = "var(--ink)";
+      b.addEventListener("click", async () => {
+        try { await navigator.clipboard.writeText(item.v); b.textContent = "Kopiert"; }
+        catch { const r = document.createRange(); r.selectNodeContents(v); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Markiert"; }
+        setTimeout(() => (b.textContent = "Kopieren"), 1600);
+      });
+      row.append(b);
+    }
+    if (item.href) {
+      const a = document.createElement("a");
+      a.href = item.href; a.target = "_blank"; a.rel = "noopener";
+      a.textContent = item.link || "Öffnen";
+      a.style.color = onDark ? "var(--card-ink)" : "var(--accent)";
+      a.style.fontSize = "0.75rem";
+      row.append(a);
+    }
+    el.append(row);
+  }
+}
+render("card-contact", true);
+render("contact-list", false);
+</script>
+
+</body>
+</html>
