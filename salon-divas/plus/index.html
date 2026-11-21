@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 <!-- Fotos: Unsplash (Stockfotos, Platzhalter bis eigene Fotos vom Salon da sind) -->
-<!-- Variante „Plus“: Basis-Seite + Terminanfrage, Team, Looks, FAQ, Deutsch/Englisch, Google-Daten (JSON-LD) -->
+<!-- Variante „Plus“: Basis-Seite + Terminanfrage, Team, Looks, FAQ, Deutsch/Türkisch, Google-Daten (JSON-LD) -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -232,9 +232,9 @@ footer nav{display:flex;gap:20px}
         <a href="#ueber" data-i18n="nav4">Team</a>
         <a href="#besuch" data-i18n="nav5">Anfahrt</a>
       </nav>
-      <div class="lang" role="group" aria-label="Sprache / Language">
+      <div class="lang" role="group" aria-label="Sprache / Dil">
         <button type="button" data-lang="de" aria-pressed="true">DE</button>
-        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="tr" aria-pressed="false">TR</button>
       </div>
     </div>
   </div>
@@ -468,37 +468,37 @@ footer nav{display:flex;gap:20px}
   // Öffnungszeiten (vorläufig, Quelle: Cylex) – Minuten ab Mitternacht
   const H={1:[540,1140],2:[540,1140],3:[540,1140],4:[540,1140],5:[540,1140],6:[540,1080],0:null};
 
-  const EN={
-    nav1:"Prices",nav2:"Booking",nav3:"Looks",nav4:"Team",nav5:"Directions",
-    eyebrow:"Newly opened · New owner",
-    h1:'Barber &amp; men\'s hair at <span>Germaniahafen</span>',
-    lead:"Clean fades, classic cuts and a well-kept beard – no long wait, right on the water in Kiel.",
-    ctaBook:"Request appointment",ctaCall:"Call",
-    s1b:"Walk-ins",s1s:"confirm",s2b:"Fade specialist",s3b:"Beard &amp; shave",s3s:"With hot towel",s4b:"At Norwegenkai",
-    pEy:"Prices",pH:"Cut. Beard. Done.",pP:"Fair prices, clear service. Just drop by or request an appointment online.",
-    m1:"Haircut",m1d:"Wash, cut, styling.",m2d:"Precise transitions down to the skin.",m3:"Clipper cut",m3d:"One length, quick and clean.",
-    m4:"Beard trim &amp; lines",m4d:"Shape, lines, care.",m5:"Hot towel shave",m5d:"Straight razor and hot towel.",
-    m6:"Hair + beard",m6d:"The full package.",m7:"Boys up to 12",m7d:"Kids' haircut.",m8:"Brows &amp; wax",m8d:"offered?",
-    pFine:"Services, prices and duration still to be confirmed with the salon.",
-    bEy:"Booking",bH:"Requested in 30 seconds",bP:"Pick a service and a time – your request goes straight to the salon via WhatsApp. No account, no app.",
-    b1:"1 · Service",b2:"2 · Day",b3:"3 · Time",b4:"4 · Your name",bSum:"Your message",bSend:"Send via WhatsApp",
-    bHint:"Draft: the salon's WhatsApp number will follow – nothing is sent until then.",
-    how1:"Choose your request",how2:"WhatsApp opens with the text ready",how3:"The salon confirms",
-    lH:"Craft you can see",lP:"Just point at a picture – we know what you mean.",fAll:"All",fBart:"Beard",fRasur:"Shave",
-    lNote:"Sample photos – will be replaced with our own pictures from the salon.",
-    aEy:"About us",aH:"New boss, same address",aP1a:"Since",aMonth:"month 2026",aP1b:"Mikael has been running the salon at Germaniahafen. New team, new standards: a place you like coming back to – relaxed, clean and with a cut that fits.",
-    aP2:"A sentence or two from Mikael: experience, languages, what matters to him.",aSig:"– Mikael, owner",
-    t1:"Owner · Barber",t3:"Hairdresser",tLang:"Languages?",tSpec:"Speciality?",
-    vEy:"Visit",vH:"Opening hours &amp; directions",vHours:"Opening hours",
-    d1:"Monday",d2:"Tuesday",d3:"Wednesday",d4:"Thursday",d5:"Friday",d6:"Saturday",d0:"Sunday",dClosed:"closed",
-    vProv:"Hours provisional –",vConfirm:"please confirm",vFind:"How to find us",vNear:"At Germaniahafen, opposite the Norwegenkai.",vMaps:"Open in Google Maps",
-    vFerry:"Before the ferry to Oslo or after checking in at the youth hostel: a few minutes on foot, and you board with a fresh cut.",
-    qH:"Quick answers",q1:"Do I need an appointment?",q1a:"Answer from the salon: walk-ins welcome? Waiting time?",
-    q2:"Can I pay by card?",q2a:"Cash, debit card, credit card, Apple/Google Pay?",q3:"Where can I park?",q3a:"Parking nearby – to be confirmed by the salon.",
-    q4:"Do you cut kids' and women's hair?",q4a:"We're happy to cut boys up to 12.",q4b:"Girls / short women's cuts?",
-    q5:"Is this still the old salon?",q5a:"Same address, new owner and new team. We've taken over the shop and would love it if you gave us a fresh chance.",
-    rH:"Fresh cut? Spread the word.",rP:"New owner, new team – a short review on Google helps us a lot.",rBtn:"Write a review",
-    fPriv:"Privacy",dockBook:"Book"
+  const TR={
+    nav1:"Fiyatlar",nav2:"Randevu",nav3:"Modeller",nav4:"Ekip",nav5:"Yol tarifi",
+    eyebrow:"Yeni açıldı · Yeni sahibi",
+    h1:'<span>Germaniahafen</span>\'de erkek kuaförü &amp; berber',
+    lead:"Temiz fade'ler, klasik kesimler ve bakımlı sakal – uzun bekleme yok, Kiel'de tam suyun kenarında.",
+    ctaBook:"Randevu talep et",ctaCall:"Ara",
+    s1b:"Randevusuz",s1s:"onaylanacak",s2b:"Fade uzmanı",s3b:"Sakal &amp; tıraş",s3s:"Sıcak havluyla",s4b:"Norwegenkai'de",
+    pEy:"Fiyatlar",pH:"Saç. Sakal. Tamam.",pP:"Dürüst fiyatlar, net hizmet. Uğrayın ya da online randevu talep edin.",
+    m1:"Saç kesimi",m1d:"Yıkama, kesim, şekillendirme.",m2d:"Sıfıra kadar hassas geçişler.",m3:"Makine kesimi",m3d:"Tek boy, hızlı ve temiz.",
+    m4:"Sakal düzeltme &amp; kontür",m4d:"Şekil, çizgiler, bakım.",m5:"Ustura tıraşı",m5d:"Ustura ve sıcak havluyla.",
+    m6:"Saç + sakal",m6d:"Komple paket.",m7:"12 yaşa kadar erkek çocuk",m7d:"Çocuk saç kesimi.",m8:"Kaş &amp; ağda",m8d:"var mı?",
+    pFine:"Hizmetler, fiyatlar ve süreler salonla netleştirilecek.",
+    bEy:"Randevu",bH:"30 saniyede randevu talebi",bP:"Hizmeti ve saati seçin – talebiniz WhatsApp ile doğrudan salona gider. Hesap yok, uygulama yok.",
+    b1:"1 · Hizmet",b2:"2 · Gün",b3:"3 · Saat",b4:"4 · Adınız",bSum:"Mesajınız",bSend:"WhatsApp ile gönder",
+    bHint:"Taslak: salonun WhatsApp numarası eklenecek – o zamana kadar hiçbir şey gönderilmez.",
+    how1:"Talebinizi seçin",how2:"WhatsApp hazır metinle açılır",how3:"Salon randevuyu onaylar",
+    lH:"Gözle görülen ustalık",lP:"Fotoğrafı göstermeniz yeter – ne istediğinizi anlarız.",fAll:"Tümü",fBart:"Sakal",fRasur:"Tıraş",
+    lNote:"Örnek fotoğraflar – salondan kendi fotoğraflarımızla değiştirilecek.",
+    aEy:"Hakkımızda",aH:"Yeni patron, aynı adres",aP1a:"",aMonth:"Ay 2026",aP1b:"tarihinden beri Germaniahafen'deki salonu Mikael işletiyor. Yeni ekip, yeni standart: insanın tekrar gelmek istediği bir yer – rahat, temiz ve tam oturan bir kesimle.",
+    aP2:"Mikael'den bir iki cümle: deneyimi, konuştuğu diller, onun için önemli olanlar.",aSig:"– Mikael, salon sahibi",
+    t1:"Salon sahibi · Berber",t3:"Kuaför",tLang:"Diller?",tSpec:"Uzmanlık?",
+    vEy:"Ziyaret",vH:"Çalışma saatleri &amp; yol tarifi",vHours:"Çalışma saatleri",
+    d1:"Pazartesi",d2:"Salı",d3:"Çarşamba",d4:"Perşembe",d5:"Cuma",d6:"Cumartesi",d0:"Pazar",dClosed:"kapalı",
+    vProv:"Saatler geçici –",vConfirm:"lütfen onaylayın",vFind:"Bizi nasıl bulursunuz",vNear:"Germaniahafen'de, Norwegenkai'nin karşısında.",vMaps:"Google Maps'te aç",
+    vFerry:"Oslo feribotundan önce ya da gençlik yurduna yerleştikten sonra: birkaç dakika yürüyün, gemiye yeni tıraşla binin.",
+    qH:"Sık sorulanlar",q1:"Randevu almam gerekiyor mu?",q1a:"Salonun cevabı: randevusuz gelinebilir mi? Bekleme süresi?",
+    q2:"Kartla ödeyebilir miyim?",q2a:"Nakit, EC kart, kredi kartı, Apple/Google Pay?",q3:"Nereye park edebilirim?",q3a:"Yakındaki park yerleri – salon tarafından onaylanacak.",
+    q4:"Çocuk ve kadın saçı da kesiyor musunuz?",q4a:"12 yaşa kadar erkek çocukların saçını memnuniyetle kesiyoruz.",q4b:"Kız çocuklar / kısa kadın saçı?",
+    q5:"Burası hâlâ eski salon mu?",q5a:"Aynı adres, yeni sahip ve yeni ekip. Salonu yeni devraldık; bize yeni bir şans verirseniz çok seviniriz.",
+    rH:"Yeni tıraş mı oldunuz? Başkalarına da anlatın.",rP:"Yeni sahip, yeni ekip – Google'da kısa bir yorum bize çok yardımcı olur.",rBtn:"Yorum yaz",
+    fPriv:"Gizlilik",dockBook:"Randevu"
   };
   const T={
     de:{wd:["So","Mo","Di","Mi","Do","Fr","Sa"],today:"Heute",tomorrow:"Morgen",open:"Jetzt geöffnet · bis {t} Uhr",
@@ -506,11 +506,11 @@ footer nav{display:flex;gap:20px}
         svc:["Haarschnitt","Fade","Maschinenschnitt","Bart","Nassrasur","Haare + Bart","Kinder"],
         hi:"Hallo Salon Diva's,",want:"ich möchte gern einen Termin:",svcL:"Leistung",dayL:"Tag",timeL:"Uhrzeit",
         pick:"(bitte wählen)",thanks:"Passt das? Danke!",me:"Gruß, {n}",noTimes:"An diesem Tag keine Zeiten mehr frei."},
-    en:{wd:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],today:"Today",tomorrow:"Tomorrow",open:"Open now · until {t}",
-        closed:"Closed · opens {d} at {t}",dToday:"today",dTomorrow:"tomorrow",name:"First name",
-        svc:["Haircut","Fade","Clipper cut","Beard","Shave","Hair + beard","Kids"],
-        hi:"Hi Salon Diva's,",want:"I'd like to book an appointment:",svcL:"Service",dayL:"Day",timeL:"Time",
-        pick:"(please choose)",thanks:"Does that work? Thanks!",me:"Best, {n}",noTimes:"No more times available that day."}
+    tr:{wd:["Paz","Pzt","Sal","Çar","Per","Cum","Cmt"],today:"Bugün",tomorrow:"Yarın",open:"Şu an açık · kapanış {t}",
+        closed:"Kapalı · açılış {d} {t}",dToday:"bugün",dTomorrow:"yarın",name:"Adınız",
+        svc:["Saç kesimi","Fade","Makine kesimi","Sakal","Ustura tıraşı","Saç + sakal","Çocuk"],
+        hi:"Merhaba Salon Diva's,",want:"Randevu almak istiyorum:",svcL:"Hizmet",dayL:"Gün",timeL:"Saat",
+        pick:"(lütfen seçin)",thanks:"Uygun mu? Teşekkürler!",me:"Selamlar, {n}",noTimes:"Bu gün için boş saat kalmadı."}
   };
   let lang="de";
   const DE={};
@@ -611,7 +611,7 @@ footer nav{display:flex;gap:20px}
   // Sprache
   function setLang(l){
     lang=l;document.documentElement.lang=l;
-    document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n;el.innerHTML=l==="en"&&EN[k]!==undefined?EN[k]:DE[k];});
+    document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n;el.innerHTML=l==="tr"&&TR[k]!==undefined?TR[k]:DE[k];});
     document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===l?"true":"false"));
     nameEl.placeholder=T[l].name;
     try{localStorage.setItem("divas-lang",l);}catch(e){}
@@ -620,7 +620,7 @@ footer nav{display:flex;gap:20px}
   document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
   let saved="de";
   try{saved=localStorage.getItem("divas-lang")||"de";}catch(e){}
-  setLang(saved==="en"?"en":"de");
+  setLang(saved==="tr"?"tr":"de");
 })();
 </script>
 </body>
